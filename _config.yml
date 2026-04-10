@@ -1,0 +1,58 @@
+title: "Il Mio Blog"
+description: "Blog personale con Minimal Mistakes"
+url: "" # es: https://tuonome.netlify.app
+baseurl: ""
+
+# Tema
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "default" # air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+
+# Build
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-remote-theme
+
+# Paginazione
+paginate: 5
+paginate_path: /page:num/
+
+# Autore
+author:
+  name: "Il Tuo Nome"
+  bio: "Scrivi qui una breve descrizione di te."
+  avatar: "/assets/images/avatar.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:tua@email.com"
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      sidebar:
+        nav: "main"
+
+# Navigazione
+nav_links:
+  - title: "Home"
+    url: /
+  - title: "Blog"
+    url: /blog/
+  - title: "Chi Sono"
+    url: /about/
+
+# Encoding
+encoding: "utf-8"
+markdown: kramdown
+highlighter: rouge

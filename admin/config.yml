@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+locale: "it"
+
+collections:
+  - name: "posts"
+    label: "Articoli Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Immagine copertina", name: "header", widget: "image", required: false }
+      - { label: "Categorie", name: "categories", widget: "list", required: false }
+      - { label: "Tag", name: "tags", widget: "list", required: false }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pagine"
+    files:
+      - label: "Chi Sono"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Contenuto", name: "body", widget: "markdown" }
