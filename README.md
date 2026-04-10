@@ -1,17 +1,30 @@
 # Jekyll + Minimal Mistakes + Decap CMS
 
 Blog Jekyll con tema Minimal Mistakes e pannello admin Decap CMS.
+Hosting su Cloudflare Pages — 100% gratis, senza limiti.
 
-## 🚀 Deploy in 1 click
+## 🚀 Deploy in 1 click su Cloudflare Pages
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TUOUSERNAME/TUOREPO&stack=cms)
+1. Vai su **pages.cloudflare.com** → login con GitHub
+2. Clicca **"Create a project"** → **"Connect to Git"**
+3. Scegli il repo **Jekyllpanel**
+4. Imposta build settings:
+   - Framework preset: **Jekyll**
+   - Build command: `jekyll build`
+   - Build output directory: `_site`
+5. Clicca **"Save and Deploy"** ✅
 
-## Dopo il deploy:
+## 🔐 Attivare il pannello admin
 
-1. Vai su **Netlify → Site Settings → Identity → Enable Identity**
-2. Vai su **Services → Git Gateway → Enable**
-3. Apri la mail ricevuta → clicca Accept → scegli password
-4. Vai su `tuosito.netlify.app/admin` → sei dentro! ✅
+Dopo il deploy, il login admin usa **GitHub OAuth**:
+
+1. Vai su **github.com/settings/developers**
+2. Clicca **"New OAuth App"**
+3. Compila:
+   - Homepage URL: `https://tuosito.pages.dev`
+   - Callback URL: `https://tuosito.pages.dev/admin`
+4. Copia **Client ID** e **Client Secret**
+5. Vai su `/admin` → accedi con GitHub ✅
 
 ## Struttura
 
